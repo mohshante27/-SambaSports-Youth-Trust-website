@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SambaSports Youth Trust - Our Team</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        /* Team Grid Styles - Smaller Cards */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .team-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover img {
+            transform: scale(1.02);
+        }
+        
+        .team-card .team-info {
+            padding: 18px;
+        }
+        
+        .team-card h4 {
+            color: #1E4A2F;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        
+        .team-card .position {
+            color: #E63946;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .team-card .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .team-card .social-links a {
+            width: 32px;
+            height: 32px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #E63946;
+            transition: all 0.3s ease;
+        }
+        
+        .team-card .social-links a:hover {
+            background: #E63946;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .dept-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #E63946, #C1121F);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 20px;
+            }
+            .team-card img {
+                height: 220px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-danger" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>Kombani, Kwale County, Kenya</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@sambasportsyouth.org</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href="https://www.facebook.com/YouthSambaSports"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href="https://x.com/Samba4Youth"><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/samba4youth"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <img src="img/sambasports-logo.jpg" alt="SambaSports Youth Trust" class="img-fluid mb-4" style="max-width: 220px;">
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="programs.html" class="nav-item nav-link">Programs</a>
+                    
+                    <!-- Departments Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Departments</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="departments/admin.html" class="dropdown-item">Admin</a>
+                            <a href="departments/media.html" class="dropdown-item">Media</a>
+                            <a href="departments/sports.html" class="dropdown-item">Sports</a>
+                            <a href="departments/digital-innovation.html" class="dropdown-item">Digital Innovation & IT</a>
+                            <a href="departments/climate-action.html" class="dropdown-item">Climate Action</a>
+                            <a href="departments/gender-special-programs.html" class="dropdown-item">Gender & Special Programs</a>
+                        </div>
+                    </div>
+
+                    <!-- Projects Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="projects/amka.html" class="dropdown-item">AMKA</a>
+                            <a href="projects/english-access.html" class="dropdown-item">English Access</a>
+                            <a href="projects/shared-futures.html" class="dropdown-item">Shared Futures</a>
+                            <a href="projects/greenminds-youth-initiative.html" class="dropdown-item">Greenminds Youth Initiative</a>
+                            <a href="projects/wahapa-hapa-waste-management.html" class="dropdown-item">Wahapa Hapa Waste Management</a>
+                        </div>
+                    </div>
+
+                    <!-- Pages Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="service.html" class="dropdown-item">Service</a>
+                            <a href="donate.html" class="dropdown-item">Donate</a>
+                            <a href="team.html" class="dropdown-item active">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="events.html" class="dropdown-item">Events</a>
+                            <a href="partners.html" class="dropdown-item">Our Partners</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn btn-outline-danger py-2 px-3" href="events.html">
+                        EVENTS
+                        <div class="d-inline-flex btn-sm-square bg-white text-danger rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <h1 class="display-4 text-white animated slideInDown mb-4">Our Team</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-danger active" aria-current="page">Our Team</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Team Grid Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <span class="dept-badge">✦ TEAM MEMBERS ✦</span>
+                <h1 class="display-6 mb-3">Meet Our Dedicated Team</h1>
+                <p class="text-muted">The passionate individuals driving our mission forward</p>
+            </div>
+            
+            <div class="team-grid">
+                <!-- Team Member 1 - Executive Director -->
+                <div class="team-card wow fadeInUp" data-wow-delay="0.1s">
+                    <img src="img/Mohamed Mwachausa.jpg" alt="MOHAMED MWACHAUSA Hsc">
+                    <div class="team-info">
+                        <h4>MOHAMED MWACHAUSA Hsc</h4>
+                        <p class="position">EXECUTIVE DIRECTOR & CO-FOUNDER</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/mmwachausa"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/S"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 - Deputy Executive Director -->
+                <div class="team-card wow fadeInUp" data-wow-delay="0.2s">
+                    <img src="img/khakim mwatondo.jpg" alt="KHAKIM MWATONDO">
+                    <div class="team-info">
+                        <h4>KHAKIM MWATONDO</h4>
+                        <p class="position">DEPUTY EXECUTIVE DIRECTOR</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/khakimm"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 - Program Coordinator -->
+                <div class="team-card wow fadeInUp" data-wow-delay="0.3s">
+                    <img src="img/Cephas Juma.jpg" alt="CEPHAS JUMA">
+                    <div class="team-info">
+                        <h4>CEPHAS JUMA</h4>
+                        <p class="position">PROGRAM COORDINATOR</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 - Finance Manager -->
+                <div class="team-card wow fadeInUp" data-wow-delay="0.4s">
+                    <img src="img/omar mwandaro.jpg" alt="OMAR MWANDARO">
+                    <div class="team-info">
+                        <h4>OMAR MWANDARO</h4>
+                        <p class="position">FINANCE MANAGER</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 5 - Administrator -->
+                <div class="team-card wow fadeInUp" data-wow-delay="0.5s">
+                    <img src="img/Mark Safari Chanzi.jpg" alt="MARK SAFARI CHANZI">
+                    <div class="team-info">
+                        <h4>MARK SAFARI CHANZI</h4>
+                        <p class="position">ADMINISTRATOR</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 6 - Administrative Assistant -->
+                <div class="team-card wow fadeInUp" data-wow-delay="0.6s">
+                    <img src="img/neema mwawema.png" alt="NEEMA MWAWEMA">
+                    <div class="team-info">
+                        <h4>NEEMA MWAWEMA</h4>
+                        <p class="position">ADMINISTRATIVE ASSISTANT</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 7 - Gender & Special Programs Coordinator -->
+                <div class="team-card wow fadeInUp" data-wow-delay="0.7s">
+                    <img src="img/Mwanaisha Kuwania.jpg" alt="MWANAISHA KUWANIA">
+                    <div class="team-info">
+                        <h4>MWANAISHA KUWANIA</h4>
+                        <p class="position">GENDER & SPECIAL PROGRAMS COORDINATOR</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 8 - Monitoring & Evaluation -->
+                <div class="team-card wow fadeInUp" data-wow-delay="0.8s">
+                    <img src="img/Salim Malumbo.jpg" alt="SALIM MALUMBO">
+                    <div class="team-info">
+                        <h4>SALIM MALUMBO</h4>
+                        <p class="position">MONITORING AND EVALUATION</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 9 - Head of Media & PR -->
+                <div class="team-card wow fadeInUp" data-wow-delay="0.9s">
+                    <img src="img/Amina Chombo.jpg" alt="AMINA CHOMBO">
+                    <div class="team-info">
+                        <h4>AMINA CHOMBO</h4>
+                        <p class="position">HEAD OF MEDIA DEPT & PR</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 10 - Head of Sports Department -->
+                <div class="team-card wow fadeInUp" data-wow-delay="1.0s">
+                    <img src="img/Mwabugu Bakari.jpg" alt="MWABUGU BAKARI">
+                    <div class="team-info">
+                        <h4>MWABUGU BAKARI</h4>
+                        <p class="position">HEAD OF SPORTS DEPARTMENT</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 11 - Head of Digital Innovation & IT -->
+                <div class="team-card wow fadeInUp" data-wow-delay="1.1s">
+                    <img src="img/Mohamed Swabri.jpg" alt="MOHAMED SWABRI">
+                    <div class="team-info">
+                        <h4>MOHAMED SWABRI</h4>
+                        <p class="position">HEAD OF DIGITAL INNOVATION & IT</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/Mohshanteh"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/Swabri_Mohamed"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/moshante27"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 12 - partnerships lead -->
+                <div class="team-card wow fadeInUp" data-wow-delay="1.2s">
+                    <img src="img/Partner.jpg" alt="PARTNERSHIPS LEAD">
+                    <div class="team-info">
+                        <h4>MICHAEL TIMONAH</h4>
+                        <p class="position">PARTNERSHIPS LEAD</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team Grid End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <img src="img/sambasports-logo.jpg" alt="SambaSports Youth Trust" class="img-fluid mb-4" style="max-width: 220px;">
+                    <p>We are a youth-focused trust using sports to empower, educate, and uplift communities across Kenya.</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square me-1" href="https://x.com/Samba4Youth"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square me-1" href="https://www.facebook.com/YouthSambaSports"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-1" href="https://www.youtube.com/@sambasportsyouthagenda"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Address</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Kombani, Kwale, Kenya</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+254 793 834 390</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@sambasportsyouth.org</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Services</a>
+                    <a class="btn btn-link" href="events.html">Our Events</a>
+                    <a class="btn btn-link" href="partners.html">Our Partners</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Newsletter</h5>
+                    <p>Subscribe to get updates about our programs and impact.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-danger py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">SambaSports Youth Trust</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a href="https://facebook.com/Mohshanteh">Mohammed Swabri</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="team.html" class="btn btn-lg btn-danger btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SambaSports Youth Trust - Sports Department</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    
+    <style>
+        /* Sports Department Page Custom Styles */
+        
+        /* Team Member Carousel */
+        .team-carousel {
+            position: relative;
+            padding: 0 40px;
+        }
+        
+        .member-card {
+            background: linear-gradient(135deg, #FFF3CD, #FFE8B5);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            margin: 10px;
+            border: 1px solid #FFD966;
+        }
+        
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .member-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 3px solid #FFD966;
+        }
+        
+        .member-info {
+            padding: 20px;
+        }
+        
+        .member-info h4 {
+            color: #1E4A2F;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        
+        .member-info .position {
+            color: #E63946;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .member-info .bio {
+            color: #666;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+        
+        /* Team Carousel Navigation */
+        .team-carousel .owl-nav {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        
+        .team-carousel .owl-nav .owl-prev,
+        .team-carousel .owl-nav .owl-next {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #E63946 !important;
+            color: white !important;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+            transition: all 0.3s ease;
+            font-size: 20px !important;
+        }
+        
+        .team-carousel .owl-nav .owl-prev {
+            left: -20px;
+        }
+        
+        .team-carousel .owl-nav .owl-next {
+            right: -20px;
+        }
+        
+        .team-carousel .owl-nav .owl-prev:hover,
+        .team-carousel .owl-nav .owl-next:hover {
+            background: #C1121F !important;
+            transform: scale(1.1);
+        }
+        
+        .team-carousel .owl-dots {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .team-carousel .owl-dots .owl-dot {
+            display: inline-block;
+            margin: 0 5px;
+        }
+        
+        .team-carousel .owl-dots .owl-dot span {
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+            border-radius: 50%;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .team-carousel .owl-dots .owl-dot.active span,
+        .team-carousel .owl-dots .owl-dot:hover span {
+            background: #E63946;
+            transform: scale(1.2);
+        }
+        
+        /* Center item effect for team carousel */
+        .team-carousel .owl-item.center .member-card {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #FFF8E1, #FFECB3);
+        }
+        
+        /* Support Section */
+        .support-card {
+            background: linear-gradient(135deg, #1E4A2F, #2A6B3C);
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+            text-align: center;
+        }
+        
+        .support-card h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .support-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        
+        .support-list li {
+            margin: 12px 0;
+            font-size: 1.1rem;
+        }
+        
+        .support-list li i {
+            margin-right: 10px;
+            color: #FFD966;
+        }
+        
+        .btn-apply {
+            background: #FFD966;
+            color: #1E4A2F;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-apply:hover {
+            background: #FFC107;
+            transform: scale(1.05);
+            color: #1E4A2F;
+            text-decoration: none;
+        }
+        
+        /* Events Section - Smaller Cards */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        
+        .event-card-sports {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .event-card-sports:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .event-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        
+        .event-content {
+            padding: 15px;
+        }
+        
+        .event-date {
+            display: inline-block;
+            background: #E63946;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            margin-bottom: 10px;
+        }
+        
+        .event-title {
+            color: #1E4A2F;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .event-description {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .video-wrapper-sports {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        
+        .video-wrapper-sports iframe {
+            width: 100%;
+            height: 160px;
+            border: none;
+        }
+        
+        .first-come {
+            background: rgba(255,255,255,0.15);
+            border-left: 4px solid #FFD966;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .btn-learn {
+            background: transparent;
+            border: 2px solid #E63946;
+            color: #E63946;
+            padding: 6px 16px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-learn:hover {
+            background: #E63946;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .dept-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #E63946, #C1121F);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        /* CTA Button Styles */
+        .btn-yellow {
+            background: #FFD966;
+            color: #1E4A2F;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-yellow:hover {
+            background: #FFC107;
+            transform: scale(1.05);
+            color: #1E4A2F;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .member-img {
+                height: 220px;
+            }
+            .support-card {
+                padding: 25px;
+            }
+            .team-carousel {
+                padding: 0 20px;
+            }
+            .team-carousel .owl-nav .owl-prev {
+                left: -10px;
+            }
+            .team-carousel .owl-nav .owl-next {
+                right: -10px;
+            }
+            .events-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 992px) {
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-danger" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>Kombani, Kwale County, Kenya</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@sambasportsyouth.org</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href="https://www.facebook.com/YouthSambaSports"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href="https://x.com/Samba4Youth"><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/samba4youth"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="../index.html" class="navbar-brand ms-4 ms-lg-0">
+                <img src="../img/sambasports-logo.jpg" alt="SambaSports Youth Trust" class="img-fluid mb-4" style="max-width: 220px;">
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="../index.html" class="nav-item nav-link">Home</a>
+                    <a href="../about.html" class="nav-item nav-link">About</a>
+                    <a href="../programs.html" class="nav-item nav-link">Programs</a>
+                    
+                    <!-- Departments Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Departments</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="admin.html" class="dropdown-item">Admin</a>
+                            <a href="sports.html" class="dropdown-item active">Sports</a>
+                            <a href="media.html" class="dropdown-item">Media</a>
+                            <a href="digital-innovation.html" class="dropdown-item">Digital Innovation & IT</a>
+                            <a href="climate-action.html" class="dropdown-item">Climate Action</a>
+                            <a href="gender-special-programs.html" class="dropdown-item">Gender & Special Programs</a>
+                        </div>
+                    </div>
+
+                    <!-- Projects Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="projects/amka.html" class="dropdown-item">AMKA</a>
+                            <a href="projects/english-access.html" class="dropdown-item">English Access</a>
+                            <a href="projects/shared-futures.html" class="dropdown-item">Shared Futures</a>
+                            <a href="projects/greenminds-youth-initiative.html" class="dropdown-item">Greenminds Youth Initiative</a>
+                            <a href="projects/wahapa-hapa-waste-management.html" class="dropdown-item">Wahapa Hapa Waste Management</a>
+                        </div>
+                    </div>
+
+                    <!-- Pages Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="../service.html" class="dropdown-item">Service</a>
+                            <a href="../donate.html" class="dropdown-item">Donate</a>
+                            <a href="../team.html" class="dropdown-item">Our Team</a>
+                            <a href="../testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="../events.html" class="dropdown-item">Events</a>
+                            <a href="../partners.html" class="dropdown-item">Our Partners</a>
+                        </div>
+                    </div>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn btn-outline-danger py-2 px-3" href="../events.html">
+                        EVENTS
+                        <div class="d-inline-flex btn-sm-square bg-white text-danger rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <h1 class="display-4 text-white animated slideInDown mb-4">Sports Department</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Departments</a></li>
+                    <li class="breadcrumb-item text-danger active" aria-current="page">Sports</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Department Team Section - Carousel/Slideshow -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <span class="dept-badge">✦ OUR TEAM ✦</span>
+                <h1 class="display-6 mb-3">Sports Department Team</h1>
+                <p class="mx-auto" style="max-width: 600px;">Meet the dedicated team behind our sports programs and initiatives</p>
+            </div>
+            
+            <div class="team-carousel owl-carousel">
+                <!-- Sports Coordinator -->
+                <div class="member-card">
+                    <img src="../img/Mwabugu Bakari.jpg" alt="Sports Coordinator" class="member-img" onerror="this.src='../img/team-1.jpg'">
+                    <div class="member-info">
+                        <h4>BAKARI MWABUGU</h4>
+                        <p class="position">Sports Coordinator</p>
+                        <p class="bio">Bakari Mwabugu has over 10 years of experience in sports development and youth coaching.</p>
+                        <div class="mt-2">
+                            <a href="#" class="btn btn-sm btn-outline-danger me-1"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-danger me-1"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-danger"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Deputy Sports Coordinator -->
+                <div class="member-card">
+                    <img src="../img/Jumatatu Salim.jpg" alt="Deputy Sports Coordinator" class="member-img" onerror="this.src='../img/team-2.jpg'">
+                    <div class="member-info">
+                        <h4>JUMATATU SALIM</h4>
+                        <p class="position">Deputy Sports Coordinator</p>
+                        <p class="bio">Jumatu Salim specializes in youth talent identification and development. He manages daily operations and coordinates with schools.</p>
+                        <div class="mt-2">
+                            <a href="#" class="btn btn-sm btn-outline-danger me-1"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-danger me-1"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-danger"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Head Coach - Football -->
+                <div class="member-card">
+                    <img src="../img/Thamuda Nondo.jpg" alt="Head Coach Football" class="member-img" onerror="this.src='../img/team-3.jpg'">
+                    <div class="member-info">
+                        <h4>THAMUDA ALI</h4>
+                        <p class="position">Member</p>
+                        <p class="bio">Thamuda Ali is a certified football referee. She officiates Fkf matches at county level.</p>
+                        <div class="mt-2">
+                            <a href="#" class="btn btn-sm btn-outline-danger me-1"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-danger me-1"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-danger"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Athletics Coordinator -->
+                <div class="member-card">
+                    <img src="../img/Hamisi Hindi.jpg" alt="Athletics Coordinator" class="member-img" onerror="this.src='../img/team-4.jpg'">
+                    <div class="member-info">
+                        <h4>HAMISI HINDI</h4>
+                        <p class="position">Member</p>
+                        <p class="bio">Hamisi is a certified football referee.</p>
+                        <div class="mt-2">
+                            <a href="#" class="btn btn-sm btn-outline-danger me-1"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-danger me-1"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-danger"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div> 
+                </div>
+                
+                <!-- Basketball Coach -->
+                <div class="member-card">
+                    <img src="../img/Mwabugu Laki.jpg" alt="Basketball Coach" class="member-img" onerror="this.src='../img/team-1.jpg'">
+                    <div class="member-info">
+                        <h4>MWABUGU LAKI</h4>
+                        <p class="position">Member</p>
+                        <p class="bio">Mwabugu is a certified referee with experience in officiating tournaments.</p>
+                        <div class="mt-2">
+                            <a href="#" class="btn btn-sm btn-outline-danger me-1"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-danger me-1"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-danger"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support Request Section - Equipment Donation -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <span class="dept-badge">✦ REQUEST SUPPORT ✦</span>
+                    <h1 class="display-6 mb-3">Need Sports Equipment?</h1>
+                    <p class="mb-4">We provide sports equipment support to teams, schools, and community groups on a <strong>first-come, first-serve basis</strong>.</p>
+                    
+                    <div class="support-card">
+                        <h3><i class="fas fa-futbol me-2"></i> Available Equipment</h3>
+                        <ul class="support-list">
+                            <li><i class="fas fa-check-circle"></i> Football Jerseys & Kits</li>
+                            <li><i class="fas fa-check-circle"></i> Football Boots</li>
+                            <li><i class="fas fa-check-circle"></i> Volleyball & Nets</li>
+                            <li><i class="fas fa-check-circle"></i> Basketball & Hoops</li>
+                            <li><i class="fas fa-check-circle"></i> Athletics Gear</li>
+                            <li><i class="fas fa-check-circle"></i> Training Cones & Equipment</li>
+                        </ul>
+                        
+                        <div class="first-come">
+                            <i class="fas fa-clock me-2"></i>
+                            <strong>First Come, First Serve Basis</strong>
+                            <p class="mb-0 mt-2 small">Limited stock available. Applications are processed in order of receipt.</p>
+                        </div>
+                        
+                        <a href="https://forms.google.com/your-sports-equipment-form" class="btn-apply mt-4" target="_blank">
+                            <i class="fas fa-file-alt me-2"></i> Apply for Support
+                        </a>
+                        <p class="mt-3 small">Click the button above to fill out our Google Form application</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="position-relative">
+                        <img src="../img/sports-equipment.jpg" alt="Sports Equipment" class="img-fluid rounded-4 shadow" onerror="this.src='../img/carousel-1.jpg'">
+                        <div class="position-absolute bottom-0 end-0 bg-danger text-white p-3 rounded-4 m-3" style="max-width: 200px;">
+                            <i class="fas fa-gift fa-2x mb-2"></i>
+                            <h5 class="text-white mb-0">Limited Stock!</h5>
+                            <small>Apply today while supplies last</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sports Events Section - Smaller Cards -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <span class="dept-badge">✦ OUR EVENTS ✦</span>
+                <h1 class="display-6 mb-3">Sports Department Events</h1>
+                <p class="mx-auto" style="max-width: 600px;">Check out our past and upcoming sports events with video highlights</p>
+            </div>
+            
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card-sports wow fadeInUp" data-wow-delay="0.1s">
+                    <img src="../img/event-olympics.jpg" alt="SDGs Mini Olympics" class="event-img" onerror="this.src='../img/carousel-1.jpg'">
+                    <div class="event-content">
+                        <span class="event-date"><i class="far fa-calendar-alt me-1"></i> August 2024</span>
+                        <h3 class="event-title">SDGs Mini Olympics 2024</h3>
+                        <p class="event-description">A five-day sports extravaganza promoting the Sustainable Development Goals through athletics, team sports, and educational workshops.</p>
+                        
+                        <div class="video-wrapper-sports mb-2">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="SDGs Mini Olympics Highlights" allowfullscreen></iframe>
+                        </div>
+                        
+                        <a href="../events.html" class="btn-learn">
+                            Learn More <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="event-card-sports wow fadeInUp" data-wow-delay="0.2s">
+                    <img src="../img/event-football.jpg" alt="Kwale Inter-School Tournament" class="event-img" onerror="this.src='../img/carousel-2.jpg'">
+                    <div class="event-content">
+                        <span class="event-date"><i class="far fa-calendar-alt me-1"></i> October 2024</span>
+                        <h3 class="event-title">Kwale Inter-School Football Tournament</h3>
+                        <p class="event-description">Annual football tournament bringing together 32 schools from across Kwale County. Promotes teamwork, discipline, and healthy competition.</p>
+                        
+                        <div class="video-wrapper-sports mb-2">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Kwale Inter-School Football Tournament" allowfullscreen></iframe>
+                        </div>
+                        
+                        <a href="../events.html" class="btn-learn">
+                            Learn More <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="event-card-sports wow fadeInUp" data-wow-delay="0.3s">
+                    <img src="../img/event-marathon.jpg" alt="Diani Beach Marathon" class="event-img" onerror="this.src='../img/carousel-1.jpg'">
+                    <div class="event-content">
+                        <span class="event-date"><i class="far fa-calendar-alt me-1"></i> December 2024</span>
+                        <h3 class="event-title">Diani Beach Marathon & Fun Run</h3>
+                        <p class="event-description">Annual marathon event promoting fitness and environmental awareness. Includes full marathon, half marathon, and 5K fun run.</p>
+                        
+                        <div class="video-wrapper-sports mb-2">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Diani Beach Marathon" allowfullscreen></iframe>
+                        </div>
+                        
+                        <a href="../events.html" class="btn-learn">
+                            Learn More <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Event 4 -->
+                <div class="event-card-sports wow fadeInUp" data-wow-delay="0.4s">
+                    <img src="../img/event-youth-camp.jpg" alt="Sports Talent ID Camp" class="event-img" onerror="this.src='../img/carousel-2.jpg'">
+                    <div class="event-content">
+                        <span class="event-date"><i class="far fa-calendar-alt me-1"></i> January 2025</span>
+                        <h3 class="event-title">Annual Sports Talent ID Camp</h3>
+                        <p class="event-description">Talent identification camp for young athletes aged 12-18. Scouts from various academies attend to discover future sports stars.</p>
+                        
+                        <div class="video-wrapper-sports mb-2">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Sports Talent ID Camp" allowfullscreen></iframe>
+                        </div>
+                        
+                        <a href="../events.html" class="btn-learn">
+                            Learn More <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.5s">
+                <a href="../events.html" class="btn btn-outline-danger py-3 px-5">
+                    View All Events <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded-4 p-5" style="background: linear-gradient(135deg, #1E4A2F, #2A6B3C);">
+                        <h2 class="mb-3 text-white">Join Our Sports Programs</h2>
+                        <p class="mb-4 text-white-50">Whether you want to participate, volunteer, or support, there's a place for you in our sports family.</p>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="../contact.html" class="btn-yellow">
+                                <i class="fas fa-hand-peace me-2"></i> Get Involved
+                            </a>
+                            <a href="https://forms.google.com/your-sports-equipment-form" class="btn-yellow" target="_blank">
+                                <i class="fas fa-gift me-2"></i> Support Equipment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <img src="../img/sambasports-logo.jpg" alt="SambaSports Youth Trust" class="img-fluid mb-4" style="max-width: 220px;">
+                    <p>We are a youth-focused trust using sports to empower, educate, and uplift communities across Kenya.</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square me-1" href="https://x.com/Samba4Youth"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square me-1" href="https://www.facebook.com/YouthSambaSports"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-1" href="https://www.youtube.com/@sambasportsyouthagenda"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Address</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Kombani, Kwale, Kenya</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+254 793 834 390</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@sambasportsyouth.org</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="../about.html">About Us</a>
+                    <a class="btn btn-link" href="../contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="../service.html">Our Services</a>
+                    <a class="btn btn-link" href="../events.html">Our Events</a>
+                    <a class="btn btn-link" href="../partners.html">Our Partners</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Newsletter</h5>
+                    <p>Subscribe to get updates about our programs and impact.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-danger py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">SambaSports Youth Trust</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a href="https://facebook.com/Mohshanteh">Mohammed Swabri</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="sports.html" class="btn btn-lg btn-danger btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/parallax/parallax.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+    
+    <!-- Team Carousel Initialization -->
+    <script>
+        $(document).ready(function() {
+            $(".team-carousel").owlCarousel({
+                loop: true,
+                margin: 30,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                smartSpeed: 800,
+                center: true,
+                nav: true,
+                navText: [
+                    '<i class="bi bi-chevron-left"></i>',
+                    '<i class="bi bi-chevron-right"></i>'
+                ],
+                dots: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        margin: 15
+                    },
+                    768: {
+                        items: 2,
+                        margin: 20
+                    },
+                    992: {
+                        items: 3,
+                        margin: 30
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
